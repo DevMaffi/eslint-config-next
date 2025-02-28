@@ -1,0 +1,29 @@
+{
+    "name": "@devmaff1/eslint-config-next",
+    "version": "1.0.0",
+    "description": "Reusable ESLint configuration for Next.js projects.",
+    "type": "module",
+    "main": "./dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsup"
+    },
+    "keywords": [
+        "eslint",
+        "eslintconfig",
+        "next",
+        "eslint-plugin-next"
+    ],
+    "author": "devmaff1",
+    "license": "MIT",
+    "publishConfig": {
+        "access": "public"
+    },
+    "devDependencies": {
+        "@devmaff1/prettier-config": "2025.1.5",
+        "prettier": "3.5.2",
+        "tsup": "^8.4.0",
+        "typescript": "^5.7.3"
+    }
+}
