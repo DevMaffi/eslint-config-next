@@ -11,6 +11,14 @@
         "lint": "eslint .",
         "lint:inspect": "eslint --inspect-config"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DevMaffi/eslint-config-next.git"
+    },
+    "bugs": {
+        "url": "https://github.com/DevMaffi/eslint-config-next/issues"
+    },
+    "homepage": "https://github.com/DevMaffi/eslint-config-next#readme",
     "keywords": [
         "eslint",
         "eslintconfig",
