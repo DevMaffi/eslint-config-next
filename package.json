@@ -7,9 +7,7 @@
     "module": "./dist/index.mjs",
     "types": "./dist/index.d.ts",
     "scripts": {
-        "build": "tsup",
-        "lint": "eslint .",
-        "lint:inspect": "eslint --inspect-config"
+        "build": "tsup"
     },
     "repository": {
         "type": "git",
@@ -31,28 +29,25 @@
         "access": "public"
     },
     "peerDependencies": {
-        "eslint": "9.x",
+        "eslint": ">=9.21.0",
         "next": "14.2.24",
         "react": "18.x",
         "typescript": "5.7.x"
     },
-    "dependencies": {
+    "devDependencies": {
+        "@devmaff1/prettier-config": "2025.1.5",
         "@eslint/js": "9.21.0",
         "@next/eslint-plugin-next": "14.2.24",
         "@stylistic/eslint-plugin": "4.2.0",
-        "eslint": "^9",
         "eslint-plugin-jsx-a11y": "6.10.2",
         "eslint-plugin-react": "7.37.4",
         "eslint-plugin-react-hooks": "5.2.0",
         "eslint-plugin-react-refresh": "0.4.19",
         "globals": "^16.0.0",
+        "prettier": "3.5.3",
+        "tsup": "^8.4.0",
         "typescript": "5.7.3",
         "typescript-eslint": "8.25.0"
-    },
-    "devDependencies": {
-        "@devmaff1/prettier-config": "2025.1.5",
-        "prettier": "3.5.3",
-        "tsup": "^8.4.0"
     },
     "overrides": {
         "eslint": "^9"
