@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       eslint:
-        specifier: '>=9.21.0'
+        specifier: 9.x
         version: 9.21.0
       next:
         specifier: 14.2.24
