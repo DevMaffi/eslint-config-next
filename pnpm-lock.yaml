@@ -8,19 +8,6 @@ importers:
 
   .:
     dependencies:
-      eslint:
-        specifier: 9.x
-        version: 9.21.0
-      next:
-        specifier: 14.2.24
-        version: 14.2.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react:
-        specifier: 18.x
-        version: 18.3.1
-    devDependencies:
-      '@devmaff1/prettier-config':
-        specifier: 2025.1.5
-        version: 2025.1.5(prettier@3.5.3)
       '@eslint/js':
         specifier: 9.21.0
         version: 9.21.0
@@ -45,6 +32,22 @@ importers:
       globals:
         specifier: ^16.0.0
         version: 16.0.0
+      next:
+        specifier: 14.2.24
+        version: 14.2.24(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react:
+        specifier: 18.x
+        version: 18.3.1
+      typescript-eslint:
+        specifier: 8.25.0
+        version: 8.25.0(eslint@9.21.0)(typescript@5.7.3)
+    devDependencies:
+      '@devmaff1/prettier-config':
+        specifier: 2025.1.5
+        version: 2025.1.5(prettier@3.5.3)
+      eslint:
+        specifier: ^9
+        version: 9.21.0
       prettier:
         specifier: 3.5.3
         version: 3.5.3
@@ -52,11 +55,8 @@ importers:
         specifier: ^8.4.0
         version: 8.4.0(postcss@8.4.31)(typescript@5.7.3)
       typescript:
-        specifier: 5.7.3
+        specifier: ~5.7.3
         version: 5.7.3
-      typescript-eslint:
-        specifier: 8.25.0
-        version: 8.25.0(eslint@9.21.0)(typescript@5.7.3)
 
 packages:
 
