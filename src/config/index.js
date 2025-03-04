@@ -41,7 +41,7 @@ export default tseslint.config(
         },
     },
     ...combinePluginConfigs.map(config => ({
-        files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+        files: ["**/*.{js,cjs,mjs,jsx,ts,tsx}"],
         ...config,
     })),
 )
