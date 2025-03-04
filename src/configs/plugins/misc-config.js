@@ -2,7 +2,6 @@
 
 import pluginReactHooks from "eslint-plugin-react-hooks"
 import pluginReactRefresh from "eslint-plugin-react-refresh"
-import pluginNext from "@next/eslint-plugin-next"
 import pluginJsxA11y from "eslint-plugin-jsx-a11y"
 
 /**
@@ -12,7 +11,6 @@ const config = {
     plugins: {
         "react-hooks": pluginReactHooks,
         "react-refresh": pluginReactRefresh,
-        "@next/next": pluginNext,
         "jsx-a11y": pluginJsxA11y,
     },
 
@@ -25,10 +23,6 @@ const config = {
             "warn",
             { allowExportNames: ["metadata"] },
         ],
-
-        // @next/next
-        ...pluginNext.configs.recommended.rules,
-        "@next/next/no-duplicate-head": "off", // ❌ ☑️ ⚠️
 
         // jsx-a11y
         ...pluginJsxA11y.configs.recommended.rules,

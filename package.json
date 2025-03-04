@@ -21,7 +21,9 @@
         "eslint",
         "eslintconfig",
         "next",
-        "eslint-plugin-next"
+        "eslint-plugin-next",
+        "react",
+        "eslint-plugin-react"
     ],
     "author": "devmaff1",
     "license": "MIT",

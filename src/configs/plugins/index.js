@@ -3,10 +3,17 @@ import tseslint from "typescript-eslint"
 import pluginJs from "@eslint/js"
 import pluginReact from "eslint-plugin-react"
 
-import pluginJsConfig from "./plugins/plugin-js-config"
-import pluginReactConfig from "./plugins/plugin-react-config"
-import pluginStylisticConfig from "./plugins/plugin-stylistic-config"
-import miscConfig from "./plugins/misc-config"
+import pluginJsConfig from "./plugin-js-config"
+import pluginReactConfig from "./plugin-react-config"
+import pluginStylisticConfig from "./plugin-stylistic-config"
+import miscConfig from "./misc-config"
+
+import pluginNextConfig from "./plugin-next-config"
+
+/**
+ * @type {import("typescript-eslint").TSESLint.FlatConfig.Config["files"]}
+ */
+const files = ["**/*.{js,cjs,mjs,jsx,ts,tsx}"]
 
 /**
  * @type {import("typescript-eslint").InfiniteDepthConfigWithExtends[]}
@@ -18,7 +25,18 @@ const combinePluginConfigs = [
     miscConfig,
 ]
 
-export default tseslint.config(
+/**
+ * @type {import("typescript-eslint").InfiniteDepthConfigWithExtends[]}
+ */
+const combinePluginConfigsWithNext = [
+    ...combinePluginConfigs,
+    pluginNextConfig,
+]
+
+/**
+ * @type {import("typescript-eslint").InfiniteDepthConfigWithExtends[]}
+ */
+const configs = [
     pluginJs.configs.recommended,
     tseslint.configs.recommended,
     {
@@ -40,8 +58,20 @@ export default tseslint.config(
             },
         },
     },
+]
+
+export const reactConfig = tseslint.config(
+    ...configs,
     ...combinePluginConfigs.map(config => ({
-        files: ["**/*.{js,cjs,mjs,jsx,ts,tsx}"],
+        files,
+        ...config,
+    })),
+)
+
+export default tseslint.config(
+    ...configs,
+    ...combinePluginConfigsWithNext.map(config => ({
+        files,
         ...config,
     })),
 )
